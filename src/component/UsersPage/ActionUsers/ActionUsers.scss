@@ -1,0 +1,61 @@
+.wp__action{
+    height: 45px;
+    display: flex;
+    justify-content: space-between;
+      margin-bottom: 20px;
+      align-items: center;
+      .flexbox {
+          margin-right: 20px;
+            width: 60%;
+          height: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            .searchUser > div {
+              display: inline-block;
+              position: relative;
+          filter: drop-shadow(0 1px #0091c2);
+            }
+            .searchUser > div:after {
+                content: "";
+                background: #1d1919;
+                width: 6px;
+                height: 17px;
+                position: absolute;
+                top: 18px;
+                right: -4px;
+                -webkit-transform: rotate(135deg);
+                transform: rotate(135deg);
+            }
+            .searchUser > div > input {
+                color: #1d1919;
+                font-size: 16px;
+                background: transparent;
+                width: 15px;
+                height: 15px;
+                padding: 10px;
+                font-weight: bold;
+                border: solid 3px #1d1919;
+                outline: none;
+                border-radius: 35px;
+                -webkit-transition: all 0.5s;
+                transition: width 0.5s;
+            }
+            
+            .searchUser > div > input::placeholder {
+              color: #888888;
+              opacity: 0;
+              transition: opacity 150ms ease-out;
+            }
+            
+            .searchUser > div > input:focus::placeholder {
+              opacity: 1;
+            }
+            
+            .searchUser > div > input:focus,
+            .searchUser > div > input:not(:placeholder-shown) {
+              height: 45px;
+              width: 250px;
+            }
+          }
+  }
